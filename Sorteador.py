@@ -18,7 +18,7 @@ else:
     print("⚠️ Nenhum participante habilitado.")
     vencedores = []
 
-# ---- Salvar os vencedores em uma nova planilha ----
+# ---- Salvar os vencedores em uma nova planilha ---- -
 if vencedores:
     pd.DataFrame({"Vencedores": vencedores}).to_excel("vencedores.xlsx", index=False)
     print(f"Planilha 'vencedores.xlsx' criada com sucesso! Vencedores: {', '.join(vencedores)}")

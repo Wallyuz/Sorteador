@@ -18,7 +18,7 @@ form4["Nome"] = normalizar(form4["Nome"])
 # Interseção de todos os conjuntos
 habilitados = set(form1["Nome"]) & set(form2["Nome"]) & set(form3["Nome"]) & set(form4["Nome"])
 
-# Salvar em uma nova planilha
+# Salvar em uma nova planilha 
 pd.DataFrame({"Alunos Habilitados": list(habilitados)}).to_excel("habilitados.xlsx", index=False)
 
 print("Planilha 'habilitados.xlsx' criada com sucesso!")
