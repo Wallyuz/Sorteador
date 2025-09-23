@@ -1,6 +1,6 @@
 import pandas as pd
 
-# Carregar os arquivos exportados do Google Forms (CSV)
+# Carregar os arquivos exportados do Google Formss (CSV)
 form1 = pd.read_csv("form1.csv")
 form2 = pd.read_csv("form2.csv")
 form3 = pd.read_csv("form3.csv")

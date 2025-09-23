@@ -4,7 +4,7 @@ import random
 # ---- Configuração: número de vencedores ----
 quantidade_vencedores = 3  # Altere para quantos vencedores quiser
 
-# ---- Ler a planilha de habilitados ----
+# ---- Ler a planilha de habilitados -----
 habilitados_df = pd.read_excel("habilitados.xlsx")
 participantes = habilitados_df["Alunos Habilitados"].tolist()
 
