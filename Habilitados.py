@@ -18,13 +18,13 @@ form4["Nome"] = normalizar(form4["Nome"])
 # Interseção de todos os conjuntos
 habilitados = set(form1["Nome"]) & set(form2["Nome"]) & set(form3["Nome"]) & set(form4["Nome"])
 
-# Converter para lista e ordenar alfabeticamente (opcional)
-habilitados_ordenados = sorted(list(habilitados))
+# Converter para lista sem ordenação
+habilitados_lista = list(habilitados)
 
 # Criar DataFrame com ID
 df_habilitados = pd.DataFrame({
-    "ID": range(1, len(habilitados_ordenados) + 1),
-    "Alunos Habilitados": habilitados_ordenados
+    "ID": range(1, len(habilitados_lista) + 1),
+    "Alunos Habilitados": habilitados_lista
 })
 
 # Salvar em uma nova planilha 
