@@ -1,12 +1,13 @@
 import pandas as pd
 
 # Carregar os arquivos exportados do Google Forms (CSV)
-form1 = pd.read_csv("Estande 1.csv")
-form2 = pd.read_csv("Estande 2.csv")
-form3 = pd.read_csv("Estande 3.csv")
-form4 = pd.read_csv("Estande 4.csv")
-form5 = pd.read_csv("Estande 5.csv")
+form1 = pd.read_csv("IREDE.csv")
+form2 = pd.read_csv("IDESCO.csv")
+form3 = pd.read_csv("IEPRO.csv")
+form4 = pd.read_csv("Instituto Iracema.csv")
+form5 = pd.read_csv("NENPEN.csv")
 form6 = pd.read_csv("Apresentação.csv")
+form7 = pd.read_csv("Pichts ICTS.csv")
 
 # Normalizar os nomes (remover espaços extras e deixar minúsculo)
 def normalizar(coluna):
@@ -18,9 +19,10 @@ form3["Nome Completo"] = normalizar(form3["Nome Completo"])
 form4["Nome Completo"] = normalizar(form4["Nome Completo"])
 form5["Nome Completo"] = normalizar(form5["Nome Completo"])
 form6["Nome Completo"] = normalizar(form6["Nome Completo"])
+form7["Nome Completo"] = normalizar(form7["Nome Completo"])
 
 # Interseção de todos os conjuntos
-habilitados = set(form1["Nome Completo"]) & set(form2["Nome Completo"]) & set(form3["Nome Completo"]) & set(form4["Nome Completo"]) & set(form5["Nome Completo"]) & set(form6["Nome Completo"]) 
+habilitados = set(form1["Nome Completo"]) & set(form2["Nome Completo"]) & set(form3["Nome Completo"]) & set(form4["Nome Completo"]) & set(form5["Nome Completo"]) & set(form6["Nome Completo"]) & set(form7["Nome Completo"])
 
 # Converter para lista sem ordenação
 habilitados_lista = list(habilitados)
