@@ -10,13 +10,13 @@ form4 = pd.read_csv("form4.csv")
 def normalizar(coluna):
     return coluna.str.strip().str.lower()
 
-form1["Nome"] = normalizar(form1["Nome"])
-form2["Nome"] = normalizar(form2["Nome"])
-form3["Nome"] = normalizar(form3["Nome"])
-form4["Nome"] = normalizar(form4["Nome"])
+form1["Nome Completo"] = normalizar(form1["Nome Completo"])
+form2["Nome Completo"] = normalizar(form2["Nome Completo"])
+form3["Nome Completo"] = normalizar(form3["Nome Completo"])
+form4["Nome Completo"] = normalizar(form4["Nome Completo"])
 
 # Interseção de todos os conjuntos
-habilitados = set(form1["Nome"]) & set(form2["Nome"]) & set(form3["Nome"]) & set(form4["Nome"])
+habilitados = set(form1["Nome Completo"]) & set(form2["Nome Completo"]) & set(form3["Nome Completo"]) & set(form4["Nome Completo"])
 
 # Converter para lista sem ordenação
 habilitados_lista = list(habilitados)
