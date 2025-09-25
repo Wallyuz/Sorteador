@@ -5,9 +5,9 @@ form1 = pd.read_csv("IREDE.csv")
 form2 = pd.read_csv("IDESCO.csv")
 form3 = pd.read_csv("IEPRO.csv")
 form4 = pd.read_csv("Instituto Iracema.csv")
-form5 = pd.read_csv("NENPEN.csv")
+form5 = pd.read_csv("NEPEN.csv")
 form6 = pd.read_csv("Apresentação.csv")
-form7 = pd.read_csv("Pichts ICTS.csv")
+form7 = pd.read_csv("pichts ICTS.csv")
 
 # Normalizar os nomes (remover espaços extras e deixar minúsculo)
 def normalizar(coluna):
